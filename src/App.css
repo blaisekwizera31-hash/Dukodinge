@@ -1,0 +1,210 @@
+:root {
+  --bg: #fff4f0;
+  --accent: #ff6f3b;
+  --accent-dark: #e94d20;
+  --text: #1b1b1f;
+  --muted: #4a4a57;
+}
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(180deg, #fff, #ffe5db 40%, #ffecd8 100%);
+  color: var(--text);
+}
+
+.landing {
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding: 64px 24px;
+  border-bottom: 2px solid rgba(128, 0, 128, .18);
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 1280px;
+  margin: 0 auto 40px;
+}
+
+.brand {
+  font-size: 2rem;
+  letter-spacing: .05rem;
+  font-weight: 700;
+}
+
+.menu a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 111, 59, .3);
+}
+
+.menu a.cta {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent-dark);
+}
+
+.hero {
+  min-height: 90vh;
+  padding-top: 48px;
+  background: linear-gradient(135deg, #fff7f4 0%, #ffc3a4 100%);
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  margin: 0 0 20px;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero p {
+  margin: 0 0 24px;
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+.hero-actions button {
+  margin-right: 14px;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.about h2,
+.courses h2,
+.contact h2 {
+  margin: 0 0 24px;
+  font-size: 2.2rem;
+}
+
+.about-grid,
+.courses-main,
+.footer-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.about-grid {
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+}
+
+.about article,
+.course-tiles .tile,
+.footer-grid > div {
+  background: rgba(255, 255, 255, .8);
+  padding: 18px;
+  border-radius: 20px;
+  border: 2px solid rgba(128, 0, 128, .36);
+}
+
+.courses-main {
+  grid-template-columns: 260px 1fr;
+  align-items: start;
+}
+
+.course-categories button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  border: none;
+  border-radius: 20px;
+  padding: 14px 16px;
+  background: #ff7a45;
+  color: white;
+  text-align: left;
+  font-size: 1.02rem;
+  cursor: pointer;
+}
+
+.course-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.course-tiles .tile {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.start-btn {
+  display: inline-block;
+  margin-top: 24px;
+  text-decoration: none;
+  background: #fff;
+  border: 2px solid #ff6f3b;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 12px 24px;
+}
+
+.contact {
+  background: #fff9f5;
+  text-align: center;
+}
+
+.contact-links {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.contact-links a {
+  background: #ff6f3b;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.footer {
+  background: #fff;
+}
+
+.footer-grid {
+  grid-template-columns: repeat(4, minmax(140px, 1fr));
+}
+
+.footer-grid h4 {
+  margin: 0 0 10px;
+}
+
+.footer-grid a {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  margin: 4px 0;
+}
+
+@media (max-width: 960px) {
+  .about-grid, .courses-main, .footer-grid { grid-template-columns: 1fr; }
+  .top-nav { justify-content: center; }
+  .menu a { margin: 5px; }
+  .course-tiles { grid-template-columns: 1fr; }
+}
